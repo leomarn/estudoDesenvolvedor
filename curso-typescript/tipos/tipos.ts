@@ -51,7 +51,7 @@ type Funcionario = { supervisores: string[], ponto:(horas:number) => string}
 let funcionario1: Funcionario = {
     supervisores: ["Lena", "Glaucia"],
         ponto(hora: number): string  {
-            return hora <= 8 ? "Ponto Normal" : "Fora do Horário!"
+            return hora <= 8 ? "Ponto Normal" : "Fora do Horário!!!"
         
     }
 
