@@ -34,7 +34,7 @@ console.log(somando(5, 9));
 let funcionario1 = {
     supervisores: ["Lena", "Glaucia"],
     ponto(hora) {
-        return hora <= 8 ? "Ponto Normal" : "Fora do Horário!";
+        return hora <= 8 ? "Ponto Normal" : "Fora do Horário!!!";
     }
 };
 console.log(funcionario1.supervisores[0]);
