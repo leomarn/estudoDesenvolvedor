@@ -1,42 +1,29 @@
-//Lista 1 EducaSync
-//Execicio 1
+/* 3 - Escreva um algoritmo em JavaScript para ler 10 valores e escrever quantos desses
+valores lidos estão no intervalo [10,20] (incluindo os valores 10 e 20 no intervalo) e quantos
+deles estão fora deste intervalo. Utilize const e/ou let nas declarações de variáveis */
 
-function kilograma (morango, maca) {
-    return {
-        morango,
-        maca,
-        //retorna a quantidade total em kg
-        kgTotal() {
-            return morango + maca
-        },
-        //verifica as condicões promocionais se ultrapassa ou não os 5kg
-        valorCompra(){
-            if(morango <= 5){
-                morango *= 2.5
-            }else{
-                morango *= 2.2
-            }
-            if(maca <= 5){
-                maca *= 1.8
-            }else{
-                maca *= 1.5
-            }
-            return morango + maca
-        },
+function lerValores(valorD, valorF) {
+    let valores = []
+    
+    
+    
+    for(i = 0; i < 10; i++) {
+      valores[i] = parseInt(prompt('Digite os valores!'))
+      console.log(valores[i])
+      if( valores[i] >= 10 && valores[i] <= 20) {
+        valorD = valores[i]
+      } else {
+        valorF = valores[i]
+      }
     }
-}
-
-//Aqui voce seta a quantidade em peso sendo morango e maçã respectivamente.
-const compra = new kilograma(6,7)
-
-//Funcão que gera desconto ao cliente, se o peso total for maior que 8kg ou se ultrapassa os 25 reais
-valorDesconto =  (kg, valor) => { return (kg > 8) || (valor> 25) ? valor * 0.9 : valor }
-
-let kg = compra.kgTotal()
-let valor = compra.valorCompra()
-
-
-let valorFinal = valorDesconto(kg,valor)
-
-console.log(`Peso Total: ${kg}, Valor: ${valor}, Valor Promocional: ${valorFinal}`)
-
+    
+    console.log(`'Quantidade de numeros no intervalo [10,20] foi: ${valorD}`)
+    console.log(`'Quantidade de numeros FORA do intervalo [10,20]: ${valorF}`)
+    
+  
+  }
+    
+    
+  
+  
+  console.log(lerValores());
